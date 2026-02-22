@@ -28,14 +28,20 @@ const PhoneCarousel = ({ images, projectName }: PhoneCarouselProps) => {
 
   return (
     <div className="relative py-8">
-      <div ref={emblaRef} className="overflow-hidden">
+      <div ref={emblaRef}>
         <div className="flex items-center">
           {images.map((img, idx) => {
             const isActive = idx === selectedIndex;
             return (
               <div
                 key={idx}
-                className="flex-[0_0_60%] min-w-0 px-2 transition-all duration-300 ease-out"
+                className="
+                  flex-[0_0_auto]
+                  shrink-0
+                  min-w-0
+                  transition-all duration-300 ease-out
+                  px-2
+                "
                 style={{
                   transform: isActive ? "scale(1)" : "scale(0.85)",
                   opacity: isActive ? 1 : 0.5,
@@ -44,16 +50,16 @@ const PhoneCarousel = ({ images, projectName }: PhoneCarouselProps) => {
               >
                 {isActive ? (
                   /* Phone frame for center slide */
-                  <div className="relative mx-auto max-w-[240px] md:max-w-[280px]">
+                  <div className="relative max-w-[200px] md:max-w-[180px]">
                     {/* Phone bezel */}
-                    <div className="rounded-[2rem] border-[6px] border-foreground/90 bg-foreground/90 p-1 shadow-2xl">
+                    <div className="rounded-[2rem] border-[6px] border-foreground/90 bg-foreground/90 p-1">
                       {/* Notch */}
                       <div className="relative">
                         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-5 bg-foreground/90 rounded-b-xl z-10" />
                         <img
                           src={img}
                           alt={`${projectName} screenshot ${idx + 1}`}
-                          className="w-full aspect-[9/16] object-cover rounded-[1.5rem]"
+                          className="w-full aspect-[7/16] object-fill rounded-[1.5rem]"
                           loading="lazy"
                         />
                       </div>
@@ -61,11 +67,11 @@ const PhoneCarousel = ({ images, projectName }: PhoneCarouselProps) => {
                   </div>
                 ) : (
                   /* Plain image for side slides */
-                  <div className="mx-auto max-w-[220px] md:max-w-[260px]">
+                  <div className="max-w-[150px] md:max-w-[120px]">
                     <img
                       src={img}
                       alt={`${projectName} screenshot ${idx + 1}`}
-                      className="w-full aspect-[9/16] object-cover rounded-xl"
+                      className="w-full aspect-[7/16] object-cover rounded-xl"
                       loading="lazy"
                     />
                   </div>

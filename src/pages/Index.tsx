@@ -1,33 +1,53 @@
-import { Mail, MessageCircle, ArrowRight } from "lucide-react";
+import { Mail, MessageCircle, ArrowRight, Linkedin } from "lucide-react";
 import PhoneCarousel from "@/components/PhoneCarousel";
 import projectPos from "@/assets/project-pos.png";
 import projectDashboard from "@/assets/project-dashboard.png";
 import projectInventory from "@/assets/project-inventory.png";
+import starhalo1 from "@/assets/starhalo/1.jpeg";
+import starhalo2 from "@/assets/starhalo/2.jpeg";
+import starhalo3 from "@/assets/starhalo/3.jpeg";
+import starhalo4 from "@/assets/starhalo/4.jpeg";
+import starhalo5 from "@/assets/starhalo/5.jpeg";
+import welling1 from "@/assets/welling/1.jpeg";
+import welling2 from "@/assets/welling/2.jpeg";
+import welling3 from "@/assets/welling/3.jpeg";
+import welling4 from "@/assets/welling/4.jpeg";
+import welling5 from "@/assets/welling/5.jpeg";
+import panenkita1 from "@/assets/panenkita/1.jpeg";
+import panenkita2 from "@/assets/panenkita/2.jpeg";
+import panenkita3 from "@/assets/panenkita/3.jpeg";
+import panenkita4 from "@/assets/panenkita/4.jpeg";
+import panenkita5 from "@/assets/panenkita/5.jpeg";
+import ceriakid1 from "@/assets/ceriakid/1.jpeg";
+import ceriakid2 from "@/assets/ceriakid/2.jpeg";
+import ceriakid3 from "@/assets/ceriakid/3.jpeg";
+import ceriakid4 from "@/assets/ceriakid/4.jpeg";
+import ceriakid5 from "@/assets/ceriakid/5.jpeg";
 
 const projects = [
   {
     name: "Starhalo: Thumbler Detector App",
     problem: "Many people forget to drink enough water, and companies don't know how their tumblers are used.",
     solution: "I built a mobile app that detects water consumption from a tumbler and connects users through a community.",
-    images: [projectPos, projectDashboard, projectInventory],
+    images: [starhalo1, starhalo2, starhalo3, starhalo4, starhalo5],
   },
   {
     name: "Welling: Pregnancy Monitoring App",
     problem: "Pregnancy data is often hard to understand and not shared clearly between partners.",
     solution: "I built a pregnancy app that helps women track their condition and share important data with their partner.",
-    images: [projectDashboard, projectPos, projectInventory],
+    images: [welling1, welling2, welling3, welling4, welling5],
   },
   {
-    name: "Lumbung Tani: Farmer Selling App",
+    name: "Panen Kita: Farmer Selling App",
     problem: "Farmers find it difficult to sell directly to buyers without unfair middlemen.",
     solution: "I built an app that connects farmers and buyers directly for simpler and fairer trading.",
-    images: [projectInventory, projectPos, projectDashboard],
+    images: [panenkita1, panenkita2, panenkita3, panenkita4, panenkita5],
   },
   {
-    name: "EasyPI: Import/Export App",
-    problem: "Importers and exporters struggle to find trusted partners and manage international trade.",
-    solution: "I built a mobile app that connects importers and exporters from different countries in one platform.",
-    images: [projectInventory, projectDashboard, projectPos],
+    name: "Ceriakid: Stock Tracking App",
+    problem: "Clothing brands often struggle to track stock accurately across products and sizes.",
+    solution: "I built a mobile app that helps a clothing brand manage and monitor their inventory in one place.",
+    images: [ceriakid1, ceriakid2, ceriakid3, ceriakid4, ceriakid5],
   },
 ];
 
@@ -99,6 +119,16 @@ const Index = () => {
           >
             <MessageCircle className="w-5 h-5 text-muted-foreground" />
             WhatsApp
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/rifqi-muzakki-42881a292"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-3 text-base text-foreground hover:text-accent transition-colors"
+          >
+            <Linkedin className="w-5 h-5 text-muted-foreground" />
+            LinkedIn
           </a>
         </div>
       </section>
