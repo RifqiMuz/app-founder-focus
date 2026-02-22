@@ -27,9 +27,9 @@ const PhoneCarousel = ({ images, projectName }: PhoneCarouselProps) => {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="relative py-8">
-      <div ref={emblaRef}>
-        <div className="flex items-center">
+    <div className="relative py-8 overflow-hidden -mx-6 px-6">
+      <div ref={emblaRef} className="overflow-hidden" style={{ touchAction: 'pan-y pinch-zoom' }}>
+        <div className="flex items-center -ml-2">
           {images.map((img, idx) => {
             const isActive = idx === selectedIndex;
             return (
