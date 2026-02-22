@@ -5,21 +5,27 @@ import projectInventory from "@/assets/project-inventory.png";
 
 const projects = [
   {
-    name: "POS App for Small Shops",
-    problem: "Small retailers needed a simple way to track daily sales without expensive subscriptions.",
-    solution: "Built a lightweight Android POS app with one-time payment, offline support, and receipt printing.",
+    name: "Starhalo: Thumbler Detector App",
+    problem: "Many people forget to drink enough water, and companies don’t know how their tumblers are used.",
+    solution: "I built a mobile app that detects water consumption from a tumbler and connects users through a community.",
     image: projectPos,
   },
   {
-    name: "Business Dashboard App",
-    problem: "A growing logistics company had no visibility into daily operations from mobile.",
-    solution: "Created a mobile dashboard that shows key metrics, orders, and team activity in real time.",
+    name: "Welling: Pregnancy Monitoring App",
+    problem: "Pregnancy data is often hard to understand and not shared clearly between partners.",
+    solution: "I built a pregnancy app that helps women track their condition and share important data with their partner.",
     image: projectDashboard,
   },
   {
-    name: "Inventory Management App",
-    problem: "A wholesale distributor was tracking stock manually across three warehouses.",
-    solution: "Delivered an Android app with barcode scanning, stock alerts, and multi-location support.",
+    name: "Lumbung Tani: Farmer Selling App",
+    problem: "Farmers find it difficult to sell directly to buyers without unfair middlemen.",
+    solution: "I built an app that connects farmers and buyers directly for simpler and fairer trading.",
+    image: projectInventory,
+  },
+  {
+    name: "EasyPI: Import/Export App",
+    problem: "Importers and exporters struggle to find trusted partners and manage international trade.",
+    solution: "I built a mobile app that connects importers and exporters from different countries in one platform.",
     image: projectInventory,
   },
 ];
@@ -32,9 +38,9 @@ const Index = () => {
         <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight text-foreground">
           I help founders turn ideas into working mobile apps.
         </h1>
-        <p className="mt-4 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
+        {/* <p className="mt-4 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl">
           Android-first mobile apps for early-stage startups and small businesses.
-        </p>
+        </p> */}
         <p className="mt-6 text-base text-muted-foreground leading-relaxed max-w-lg">
           I work directly with founders to ship usable, reliable apps — without
           overengineering. You get what you need to launch, grow, and iterate.
@@ -54,7 +60,7 @@ const Index = () => {
       </div>
 
       {/* What You Build */}
-      <section className="px-6 py-20 md:py-28 max-w-3xl mx-auto">
+      {/* <section className="px-6 py-20 md:py-28 max-w-3xl mx-auto">
         <h2 className="font-heading text-2xl md:text-3xl text-foreground">What I build</h2>
         <ul className="mt-8 space-y-4">
           {[
@@ -69,16 +75,16 @@ const Index = () => {
             </li>
           ))}
         </ul>
-      </section>
+      </section> */}
 
       {/* Divider */}
-      <div className="max-w-3xl mx-auto px-6">
+      {/* <div className="max-w-3xl mx-auto px-6">
         <div className="border-t border-border" />
-      </div>
+      </div> */}
 
       {/* Selected Projects */}
       <section className="px-6 py-20 md:py-28 max-w-3xl mx-auto">
-        <h2 className="font-heading text-2xl md:text-3xl text-foreground">Selected projects</h2>
+        <h2 className="font-heading text-2xl md:text-3xl text-foreground">What I Build</h2>
         <div className="mt-10 space-y-16">
           {projects.map((project, i) => (
             <div key={i} className="group">
@@ -111,14 +117,14 @@ const Index = () => {
         </p>
         <div className="mt-8 space-y-4">
           <a
-            href="mailto:hello@example.com"
+            href="mailto:rifqimuzakki45@gmail.com"
             className="flex items-center gap-3 text-base text-foreground hover:text-accent transition-colors"
           >
             <Mail className="w-5 h-5 text-muted-foreground" />
-            hello@example.com
+            rifqimuzakki45@gmail.com
           </a>
           <a
-            href="https://wa.me/1234567890"
+            href="https://wa.me/6281936242236"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 text-base text-foreground hover:text-accent transition-colors"
@@ -132,7 +138,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="px-6 py-8 max-w-3xl mx-auto border-t border-border">
         <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} · Mobile App Developer
+          © {new Date().getFullYear()} · Rifqi Muzakki: Mobile Developer
         </p>
       </footer>
     </div>
