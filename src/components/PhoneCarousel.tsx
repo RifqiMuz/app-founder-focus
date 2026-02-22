@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
+import { useImagePreload } from "@/hooks/use-image-preload";
 
 interface PhoneCarouselProps {
   images: string[];
@@ -13,6 +14,7 @@ const PhoneCarousel = ({ images, projectName }: PhoneCarouselProps) => {
     [Autoplay({ delay: 3000, stopOnInteraction: true })]
   );
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const imagesLoaded = useImagePreload(images);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -25,6 +27,22 @@ const PhoneCarousel = ({ images, projectName }: PhoneCarouselProps) => {
     emblaApi.on("select", onSelect);
     return () => { emblaApi.off("select", onSelect); };
   }, [emblaApi, onSelect]);
+
+  if (!imagesLoaded) {
+    return (
+      <div className="relative py-8 overflow-hidden -mx-6 px-6">
+        <div className="flex items-center justify-center">
+          <div className="max-w-[200px] md:max-w-[180px]">
+            <div className="rounded-[2rem] border-[6px] border-foreground/90 bg-foreground/90 p-1">
+              <div className="w-full aspect-[7/16] bg-muted/50 rounded-[1.5rem] animate-pulse flex items-center justify-center">
+                <div className="text-muted-foreground text-sm">Loading...</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="relative py-8 overflow-hidden -mx-6 px-6">

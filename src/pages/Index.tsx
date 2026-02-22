@@ -1,5 +1,6 @@
 import { Mail, MessageCircle, ArrowRight, Linkedin } from "lucide-react";
 import PhoneCarousel from "@/components/PhoneCarousel";
+import { useImagePreload } from "@/hooks/use-image-preload";
 import projectPos from "@/assets/project-pos.png";
 import projectDashboard from "@/assets/project-dashboard.png";
 import projectInventory from "@/assets/project-inventory.png";
@@ -52,6 +53,10 @@ const projects = [
 ];
 
 const Index = () => {
+  // Preload all project images on component mount
+  const allImages = projects.flatMap(project => project.images);
+  const imagesPreloaded = useImagePreload(allImages);
+
   return (
     <div className="min-h-screen bg-background text-foreground font-body">
       {/* Hero */}
@@ -78,7 +83,11 @@ const Index = () => {
       </div>
 
       {/* Selected Projects */}
-      <section className="px-6 py-20 md:py-28 max-w-3xl mx-auto">
+      {!imagesPreloaded ? (
+          <div className="mt-10 flex items-center justify-center py-20">
+            <div className="text-muted-foreground">Loading projects...</div>
+          </div>
+        ) : ( <section className="px-6 py-20 md:py-28 max-w-3xl mx-auto">
         <h2 className="font-heading text-2xl md:text-3xl text-foreground">What I Build</h2>
         <div className="mt-10 space-y-16">
           {projects.map((project, i) => (
@@ -90,7 +99,7 @@ const Index = () => {
             </div>
           ))}
         </div>
-      </section>
+      </section>)}
 
       {/* Divider */}
       <div className="max-w-3xl mx-auto px-6">
