@@ -1,6 +1,5 @@
 import { Mail, MessageCircle, ArrowRight } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
+import PhoneCarousel from "@/components/PhoneCarousel";
 import projectPos from "@/assets/project-pos.png";
 import projectDashboard from "@/assets/project-dashboard.png";
 import projectInventory from "@/assets/project-inventory.png";
@@ -64,28 +63,7 @@ const Index = () => {
         <div className="mt-10 space-y-16">
           {projects.map((project, i) => (
             <div key={i} className="group">
-              <div className="rounded-lg overflow-hidden bg-card border border-border">
-                <Carousel
-                  opts={{ loop: true }}
-                  plugins={[Autoplay({ delay: 3000, stopOnInteraction: true })]}
-                  className="w-full"
-                >
-                  <CarouselContent>
-                    {project.images.map((img, idx) => (
-                      <CarouselItem key={idx}>
-                        <img
-                          src={img}
-                          alt={`${project.name} screenshot ${idx + 1}`}
-                          className="w-full h-64 md:h-80 object-contain bg-secondary"
-                          loading="lazy"
-                        />
-                      </CarouselItem>
-                    ))}
-                  </CarouselContent>
-                  <CarouselPrevious className="left-2" />
-                  <CarouselNext className="right-2" />
-                </Carousel>
-              </div>
+              <PhoneCarousel images={project.images} projectName={project.name} />
               <h3 className="mt-5 font-heading text-xl text-foreground">{project.name}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{project.problem}</p>
               <p className="mt-1 text-sm text-secondary-foreground">{project.solution}</p>
