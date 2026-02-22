@@ -25,29 +25,44 @@ import ceriakid3 from "@/assets/ceriakid/3.jpeg";
 import ceriakid4 from "@/assets/ceriakid/4.jpeg";
 import ceriakid5 from "@/assets/ceriakid/5.jpeg";
 
+// const projects = [
+//   {
+//     name: "Starhalo: Thumbler Detector App",
+//     problem: "Many people forget to drink enough water, and companies don't know how their tumblers are used.",
+//     solution: "I built a mobile app that detects water consumption from a tumbler and connects users through a community.",
+//     images: [starhalo1, starhalo2, starhalo3, starhalo4, starhalo5],
+//   },
+//   {
+//     name: "Welling: Pregnancy Monitoring App",
+//     problem: "Pregnancy data is often hard to understand and not shared clearly between partners.",
+//     solution: "I built a pregnancy app that helps women track their condition and share important data with their partner.",
+//     images: [welling1, welling2, welling3, welling4, welling5],
+//   },
+//   {
+//     name: "Panen Kita: Farmer Selling App",
+//     problem: "Farmers find it difficult to sell directly to buyers without unfair middlemen.",
+//     solution: "I built an app that connects farmers and buyers directly for simpler and fairer trading.",
+//     images: [panenkita1, panenkita2, panenkita3, panenkita4, panenkita5],
+//   },
+//   {
+//     name: "Ceriakid: Stock Tracking App",
+//     problem: "Clothing brands often struggle to track stock accurately across products and sizes.",
+//     solution: "I built a mobile app that helps a clothing brand manage and monitor their inventory in one place.",
+//     images: [ceriakid1, ceriakid2, ceriakid3, ceriakid4, ceriakid5],
+//   },
+// ];
+
 const projects = [
-  {
-    name: "Starhalo: Thumbler Detector App",
-    problem: "Many people forget to drink enough water, and companies don't know how their tumblers are used.",
-    solution: "I built a mobile app that detects water consumption from a tumbler and connects users through a community.",
-    images: [starhalo1, starhalo2, starhalo3, starhalo4, starhalo5],
-  },
-  {
-    name: "Welling: Pregnancy Monitoring App",
-    problem: "Pregnancy data is often hard to understand and not shared clearly between partners.",
-    solution: "I built a pregnancy app that helps women track their condition and share important data with their partner.",
-    images: [welling1, welling2, welling3, welling4, welling5],
-  },
   {
     name: "Panen Kita: Farmer Selling App",
     problem: "Farmers find it difficult to sell directly to buyers without unfair middlemen.",
-    solution: "I built an app that connects farmers and buyers directly for simpler and fairer trading.",
+    solution: "We built an app that connects farmers and buyers directly for simpler and fairer trading.",
     images: [panenkita1, panenkita2, panenkita3, panenkita4, panenkita5],
   },
   {
     name: "Ceriakid: Stock Tracking App",
     problem: "Clothing brands often struggle to track stock accurately across products and sizes.",
-    solution: "I built a mobile app that helps a clothing brand manage and monitor their inventory in one place.",
+    solution: "I'm with Mangcoding built a mobile app that helps a clothing brand manage and monitor their inventory in one place.",
     images: [ceriakid1, ceriakid2, ceriakid3, ceriakid4, ceriakid5],
   },
 ];
